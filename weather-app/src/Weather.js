@@ -19,8 +19,6 @@ export default function Weather(){
     let humidity = response.data.temperature.humidity;
     let weatherDesc = response.data.condition.description
     setImgSrc(`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`) ;
-    console.log(imgSrc);
-
     setInf({city, currentTemp, imgSrc , windSpeed, humidity,weatherDesc });
  }
 
@@ -28,7 +26,8 @@ export default function Weather(){
     function handleSubmit(event){
         event.preventDefault()
         let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=7386080a2f6318d17ebb9t1f5453o70f`;
-        axios.get(apiUrl).then(handleResponse);    }
+        axios.get(apiUrl).then(handleResponse);    
+      }
     return(
     <div className="search-box">
         <form className="d-flex" role="search" onSubmit={handleSubmit}>

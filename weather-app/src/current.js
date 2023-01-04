@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
 import { MagnifyingGlass } from "react-loader-spinner";
-
+import Forecast from './forecast';
 export default function Current(props) {
     if (props.input === null) {
       return (
@@ -32,21 +32,17 @@ export default function Current(props) {
                         </p>
                     </div>
                     <div className="col-4 align-middle pt-4">
-                    
                         <span>Temperature: {props.input.currentTemp}°C</span>
                         <img src={props.input.imgSrc} alt="weather icon"/>
-
-                       
                     </div>
-                    <div className="col-4 align-middle pt-3 text-center">
-                    
+                    <div className="col-4 align-middle pt-3 text-center">                   
                         <p>WindSpeed : {props.input.windSpeed}km/h</p>
                         <p>Humidity : {props.input.humidity}%</p>
                         <p> {props.input.weatherDesc}</p>
                     </div>
-
-
                 </div>
+                
+                <Forecast/>
             
         </div>
         
