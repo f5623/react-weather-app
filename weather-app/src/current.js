@@ -21,31 +21,28 @@ export default function Current(props) {
       );
     } else {
       return (
-        <div className="weather-now mt-4">
+        <div className="weather-now mt-1">
                 <div className="row">
-                    <div className="col-4">
-                        <p>{props.input.City}</p>
-                        
+                    <div className="col-4 pt-3 align-middle">
+                        <p className='fs-2 text-capitalize'>{props.input.city}</p>
                         <p className="text-muted">
                         <span className="day">{new Date().toLocaleString('en-GB', {day: 'numeric',
                         month: 'short',}) + ""}</span> ,<span className="time">
                         {new Date().toLocaleString('en-US', {hour: 'numeric',minute: 'numeric',hour12: true,})}</span>
                         </p>
                     </div>
-                    <div className="col-4">
+                    <div className="col-4 align-middle pt-4">
                     
                         <span>Temperature: {props.input.currentTemp}°C</span>
+                        <img src={props.input.imgSrc} alt="weather icon"/>
+
                        
-                        {/* <li>
-            {" "}
-            <img src={props.input.iconDesc} />
-          </li> */}
-                    
                     </div>
-                    <div className="col-4 pt-3 text-center">
+                    <div className="col-4 align-middle pt-3 text-center">
                     
                         <p>WindSpeed : {props.input.windSpeed}km/h</p>
                         <p>Humidity : {props.input.humidity}%</p>
+                        <p> {props.input.weatherDesc}</p>
                     </div>
 
 
