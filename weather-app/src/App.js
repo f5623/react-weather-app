@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Weather from './Weather';
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="App container">
+      <header className=" App-wrapper mx-auto ">
+      
+      <Weather/>
       </header>
+      <small className="footnote">
+      <a href="https://github.com/f5623">This project </a>
+      is coded by <a href="https://github.com/f5623">Fafa</a> as
+      <a href="https://www.shecodes.io/">SheCodes React </a> final project.
+     </small>
     </div>
   );
 }
