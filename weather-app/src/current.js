@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css"
 import { MagnifyingGlass } from "react-loader-spinner";
-import Forecast from './forecast';
+
 export default function Current(props) {
     if (props.input === null) {
       return (
         <div>
-          <p> Waiting for your city </p>
+          <p className='mt-4'> Waiting for your city </p>
           <MagnifyingGlass
             visible={true}
             height="80"
@@ -42,7 +42,6 @@ export default function Current(props) {
                     </div>
                 </div>
                 
-                <Forecast/>
             
         </div>
         
